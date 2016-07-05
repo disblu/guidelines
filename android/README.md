@@ -1,7 +1,7 @@
 
 # Disblu Guidelines
 
-* [Android](https://github.com/disblu/guidelines/tree/master/android)
+* [Android](https://github.com/disblu/guidelines/tree/master/rails)
 
 
 Contributing
