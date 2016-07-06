@@ -76,6 +76,7 @@ Naming conventions for drawables:
 | Notification | `notification_`    | `notification_bg.9.png`     |
 | Tabs         | `tab_`            | `tab_pressed.9.png`         |
 
+Naming conventions for icons (taken from [Android iconography guidelines](http://developer.android.com/design/style/iconography.html)):
 
 | Asset Type                      | Prefix             | Example                      |
 | --------------------------------| ----------------   | ---------------------------- |
@@ -108,3 +109,13 @@ Layout files should match the name of the Android components that they are inten
 | Dialog           | `ChangePasswordDialog` | `dialog_change_password.xml`  |
 | AdapterView item | ---                    | `item_person.xml`             |
 | Partial layout   | ---                    | `partial_stats_bar.xml`       |
+
+#### 1.2.2.3 Menu files
+
+Menu files should match the name of the component. For example, if we are defining a menu file that is going to be used in the `UserActivity`, then the name of the file should be `activity_user.xml`
+
+A good practice is to not include the word `menu` as part of the name because these files are already located in the `menu` directory.
+
+#### 1.2.2.4 Values files
+
+Resource files in the values folder should be  in plural (Example: `strings.xml`, `styles.xml`, `colors.xml`, `dimens.xml`, `attrs.xml` )
