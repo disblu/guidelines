@@ -1,12 +1,12 @@
 # Android Guidelines
 
 
-This guide contains a series of recommendations and rules for android developers. The main purpose is to build maintainable,  scalable, flexible and easy to read code for other developers.
+This guide contains a series of recommendations and rules for android developers. The main purpose is to build maintainable,  scalable, flexible and easy to read code for others developers.
 
 
 ## 1.1 Project structure
 
-The projects should follow the android grade project structure. Gradle follows the concept of convention over configuration, providing sensible default option values when possible. The basic project starts with two components called “source sets”, one for the main source code and one for the test code. These live respectively in:
+The projects should follow the android gradle project structure. Gradle follows the concept of convention over configuration, providing sensible default option values when possible. The basic project starts with two components called “source sets”, one for the main source code and one for the test code. These live respectively in:
 
  - src/main/
  - src/androidTest/
@@ -30,4 +30,23 @@ This means that *.java files for the main source set are located in src/main/jav
 
 **Note**: src/androidTest/AndroidManifest.xml is not needed as it is created automatically.
 
+Example:
+```
+├─ library-foobar
+├─ app
+│  ├─ libs
+│  ├─ src
+│  │  ├─ androidTest
+│  │  │  └─ java
+│  │  │     └─ com/disblu/project
+│  │  └─ main
+│  │     ├─ java
+│  │     │  └─ com/disblu/project
+│  │     ├─ res
+│  │     └─ AndroidManifest.xml
+│  ├─ build.gradle
+│  └─ proguard-rules.pro
+├─ build.gradle
+└─ settings.gradle
+```
 You can read more about the project structure on the  [Gradles user manual](http://tools.android.com/tech-docs/new-build-system/user-guide)
