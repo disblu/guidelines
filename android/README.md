@@ -151,3 +151,15 @@ try {
 }
 ```
 In almost all cases it is inappropriate to catch generic Exception or Throwable . It is very dangerous because it means that Exceptions you never expected (including RuntimeExceptions like ClassCastException) get caught in application-level error handling. **It obscures the failure handling properties of your code,** meaning if someone adds a new type of Exception in the code you're calling, the compiler won't help you realize you need to handle the error differently.
+
+### 2.1.3 Don't use finalizers
+
+Android doesn't use finalizers. In most cases, you can do what you need from a finalizer with good exception handling. If you absolutely need it, define a close() method (or the like) and document exactly when that method needs to be called (see InputStream for an example). In this case it is appropriate but not required to print a short log message from the finalizer, as long as it is not expected to flood the logs.
+
+### 2.1.4 Fully qualify imports
+
+bad `import foo.*;`
+
+good `import foo.Bar;`
+
+Makes it obvious what classes are actually used and the code is more readable for maintainers.
