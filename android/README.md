@@ -168,7 +168,7 @@ Makes it obvious what classes are actually used and the code is more readable fo
 
 There are conventions for using Android's Java libraries and tools.
 
-### 2.1.3 Use Javadoc Standard Comments
+### 2.2.1 Use Javadoc Standard Comments
 
 
 Every file should have a copyright statement at the top, followed by package and import statements (each block separated by a blank line) and finally the class or interface declaration. In the Javadoc comments, describe what the class or interface does.
@@ -206,3 +206,34 @@ Every file should have a copyright statement at the top, followed by package and
     }
 
 You can read more about it on the Oracle  [Java Doc Guide](http://www.oracle.com/technetwork/java/javase/documentation/index-137868.html)
+
+### 2.2.2 Write Short Methods
+
+When feasible, keep methods small and focused. We recognize that long methods are sometimes appropriate, so no hard limit is placed on method length. If a method exceeds **40 lines** or so, think about whether it can be broken up without harming the structure of the program.
+
+### 2.2.3 Define Fields in Standard Places
+
+Define fields **always** at the top of the file or **immediately** before the methods that use them.
+
+
+### 2.2.4 Limit Variable Scope
+
+**Keep the scope of local variables to a minimum**. By doing so, you increase the readability and maintainability of your code and reduce the likelihood of error. Each variable should be declared in the innermost block that encloses all uses of the variable.
+
+Local variables should be declared at the point they are first used. Nearly every local variable declaration should contain an initializer. **If you don't yet have enough information to initialize a variable sensibly, postpone the declaration until you do.**
+
+### 2.2.5 Use Spaces for Indentation
+
+Use four (4) space indents for blocks and never tabs. When in doubt, be consistent with the surrounding code.
+
+Use eight (8) space indents for line wraps, including function calls and assignments.
+
+good:
+
+     Instrument i =
+            someLongExpression(that, wouldNotFit, on, one, line);
+
+bad:
+
+    Instrument i =
+        someLongExpression(that, wouldNotFit, on, one, line);
