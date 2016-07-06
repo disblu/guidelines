@@ -76,7 +76,6 @@ Naming conventions for drawables:
 | Notification | `notification_`    | `notification_bg.9.png`     |
 | Tabs         | `tab_`            | `tab_pressed.9.png`         |
 
-Naming conventions for icons (taken from [Android iconography guidelines](http://developer.android.com/design/style/iconography.html)):
 
 | Asset Type                      | Prefix             | Example                      |
 | --------------------------------| ----------------   | ---------------------------- |
@@ -119,3 +118,36 @@ A good practice is to not include the word `menu` as part of the name because th
 #### 1.2.2.4 Values files
 
 Resource files in the values folder should be  in plural (Example: `strings.xml`, `styles.xml`, `colors.xml`, `dimens.xml`, `attrs.xml` )
+
+# 2 Code guidelines
+
+## 2.1 Java language rules
+
+The code styles under this section are **strict rules**, **not guidelines** or **recommendations**.
+
+### 2.1.1 Don't ignore exceptions
+
+**Do not do this!** While you may think your code will never encounter this error condition or that it is not important to handle it, ignoring exceptions as above creates mines in your code for someone else to trigger some day. **You must handle every Exception in your code** in a principled way; the specific handling varies depending on the case.
+
+```java
+void setServerPort(String value) {
+    try {
+        serverPort = Integer.parseInt(value);
+    } catch (NumberFormatException e) { }
+}
+```
+### 2.1.2 Don't catch generic exception
+
+You should not do this:
+
+```java
+try {
+    someComplicatedIOFunction();        // may throw IOException
+    someComplicatedParsingFunction();   // may throw ParsingException
+    someComplicatedSecurityFunction();  // may throw SecurityException
+    // phew, made it all the way
+} catch (Exception e) {                 // I'll just catch all exceptions
+    handleError();                      // with one generic handler!
+}
+```
+In almost all cases it is inappropriate to catch generic Exception or Throwable . It is very dangerous because it means that Exceptions you never expected (including RuntimeExceptions like ClassCastException) get caught in application-level error handling. **It obscures the failure handling properties of your code,** meaning if someone adds a new type of Exception in the code you're calling, the compiler won't help you realize you need to handle the error differently.
