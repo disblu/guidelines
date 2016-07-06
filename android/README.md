@@ -1,8 +1,6 @@
 # Android Guidelines
 
-
 This guide contains a series of recommendations and rules for android developers. The main purpose is to build maintainable,  scalable, flexible and easy to read code for others developers.
-
 
 ## 1.1 Project structure
 
@@ -50,3 +48,10 @@ Example:
 └─ settings.gradle
 ```
 You can read more about the project structure on the  [Gradles user manual](http://tools.android.com/tech-docs/new-build-system/user-guide)
+
+## 1.2 File naming
+
+### 1.2.1 Class files
+Class names are written in [UpperCamelCase](http://en.wikipedia.org/wiki/CamelCase).
+
+For classes that extend an Android component, the name of the class should end with the name of the component; for example: `ChatActivity`, `SettingsFragment`, etc.
