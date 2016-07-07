@@ -317,7 +317,7 @@ if (condition)
 
 ### 2.2.8 Limit Line Length
 
-Each line of text in your code should be at most **100 characters** long. Import lines can go over the limit.
+Each line of text in your code should be at most **100 characters** long. Import lines can go over the limit because humans rarely see them (this also simplifies tool writing).
 
 ### 2.2.9 Treat Acronyms as Words
 
@@ -327,3 +327,11 @@ Each line of text in your code should be at most **100 characters** long. Import
 | `getCustomerId`  | `getCustomerID`  |
 | `String url`     | `String URL`     |
 | `long id`        | `long ID`        |
+
+### 2.2.10 TODO Comments
+
+Use TODO comments whenever the code below is not perfect or is a hot fix.
+
+```java
+// TODO: Remove this code after the UrlTable2 has been checked in.
+```
