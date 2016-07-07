@@ -29,7 +29,7 @@ This means that *.java files for the main source set are located in src/main/jav
 **Note**: src/androidTest/AndroidManifest.xml is not needed as it is created automatically.
 
 Example:
-```
+```java
 ├─ library-foobar
 ├─ app
 │  ├─ libs
@@ -173,37 +173,39 @@ There are conventions for using Android's Java libraries and tools.
 
 Every file should have a copyright statement at the top, followed by package and import statements (each block separated by a blank line) and finally the class or interface declaration. In the Javadoc comments, describe what the class or interface does.
 
-    /*
-     * Copyright (C) 2015 The Android Open Source Project
-     *
-     * Licensed under the Apache License, Version 2.0 (the "License");
-     * you may not use this file except in compliance with the License.
-     * You may obtain a copy of the License at
-     *
-     *      http://www.apache.org/licenses/LICENSE-2.0
-     *
-     * Unless required by applicable law or agreed to in writing, software
-     * distributed under the License is distributed on an "AS IS" BASIS,
-     * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-     * See the License for the specific language governing permissions and
-     * limitations under the License.
-     */
+```java
+/*
+ * Copyright (C) 2015 The Android Open Source Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 
-    package com.android.internal.foo;
+package com.android.internal.foo;
 
-    import android.os.Blah;
-    import android.view.Yada;
+import android.os.Blah;
+import android.view.Yada;
 
-    import java.sql.ResultSet;
-    import java.sql.SQLException;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
-    /**
-     * Does X and Y and provides an abstraction for Z.
-     */
+/**
+ * Does X and Y and provides an abstraction for Z.
+ */
 
-    public class Foo {
-        ...
-    }
+public class Foo {
+    ...
+}
+```
 
 You can read more about it on the Oracle  [Java Doc Guide](http://www.oracle.com/technetwork/java/javase/documentation/index-137868.html)
 
