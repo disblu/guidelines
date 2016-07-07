@@ -344,7 +344,7 @@ If the element doesn't have any content,  you must user self closing tags.
 
 good:
 
-```xml
+```java
 <EditText
     android:id="@+id/edit_text_profile"
     android:layout_width="wrap_content"
@@ -352,7 +352,7 @@ good:
 ```
 
 bad:
-```xml
+```java
 <EditText
     android:id="@+id/edit_text_profile"
     android:layout_width="wrap_content"
@@ -366,7 +366,7 @@ Resource names are written using snake convention.
 
 Example:
 
-```xml
+```java
 <TextView
     android:id="@+id/text_view_profile"
     android:layout_width="wrap_content"
@@ -383,4 +383,26 @@ Should be prefixed with the name of the element.
 | `ImageView`          | `image_`            |
 | `Button`             | `button_`           |
 | `Menu`               | `menu_`             |
+
+### 2.3.3 String naming
+
+Strings start with a prefix of the section they belong.
+
+| Prefix             | Description                           |
+| -----------------  | --------------------------------------|
+| `error_`             | An error message                      |
+| `msg_`               | A regular information message         |
+| `title_`             | A title, i.e. a dialog title          |
+| `action_`            | An action such as "Save" or "Create"  |
+
+
+### 2.3.3 Order of attributes
+
+There is no general rule, but we recommend put the attribute using the next order:
+
+-  View Id
+-  Style
+-  Layout width and layout height
+- Other layout attributes, sorted alphabetically
+-  Remaining attributes, sorted alphabetically
 
