@@ -226,14 +226,38 @@ Local variables should be declared at the point they are first used. Nearly ever
 
 Use four (4) space indents for blocks and never tabs. When in doubt, be consistent with the surrounding code.
 
-Use eight (8) space indents for line wraps, including function calls and assignments.
+Use eight (8) space indents for line wraps, including function calls and assignments. For example, this is correct:
 
 good:
 
-     Instrument i =
-            someLongExpression(that, wouldNotFit, on, one, line);
+```java
+Instrument i =
+        someLongExpression(that, wouldNotFit, on, one, line);
+```
 
 bad:
 
-    Instrument i =
-        someLongExpression(that, wouldNotFit, on, one, line);
+```java
+Instrument i =
+    someLongExpression(that, wouldNotFit, on, one, line);
+```
+
+### 2.2.6 Follow Field Naming Conventions
+
+- Non-public, non-static field names start with m.
+- Static field names start with s.
+- Other fields start with a lower case letter.
+- Public static final fields (constants) are ALL_CAPS_WITH_UNDERSCORES.
+
+Example:
+
+```java
+public class MyClass {
+    public static final int SOME_CONSTANT = 42;
+    public int publicField;
+    private static MyClass sSingleton;
+    int mPackagePrivate;
+    private int mPrivate;
+    protected int mProtected;
+}
+```
