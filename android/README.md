@@ -303,3 +303,16 @@ bad:
 if (condition)
     body();
 ```
+
+### 2.2.8 Limit Line Length
+
+Each line of text in your code should be at most **100 characters** long. Import lines can go over the limit.
+
+### 2.2.9 Treat Acronyms as Words
+
+| Good           | Bad            |
+| -------------- | -------------- |
+| `XmlHttpRequest` | `XMLHTTPRequest` |
+| `getCustomerId`  | `getCustomerID`  |
+| `String url`     | `String URL`     |
+| `long id`        | `long ID`        |
