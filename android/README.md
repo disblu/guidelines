@@ -335,3 +335,52 @@ Use TODO comments whenever the code below is not perfect or is a hot fix.
 ```java
 // TODO: Remove this code after the UrlTable2 has been checked in.
 ```
+
+## 2.3 XML style rules
+
+### 2.3.1 Closing tags
+
+If the element doesn't have any content,  you must user self closing tags.
+
+good:
+
+```xml
+<EditText
+    android:id="@+id/edit_text_profile"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" />
+```
+
+bad:
+```xml
+<EditText
+    android:id="@+id/edit_text_profile"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+</EditText>
+```
+
+### 2.3.2 Resource naming
+
+Resource names are written using snake convention.
+
+Example:
+
+```xml
+<TextView
+    android:id="@+id/text_view_profile"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" />
+```
+
+#### 2.3.2.1 Id Naming
+
+Should be prefixed with the name of the element.
+
+| Element            | Prefix            |
+| -----------------  | ----------------- |
+| `TextView`           | `text_`             |
+| `ImageView`          | `image_`            |
+| `Button`             | `button_`           |
+| `Menu`               | `menu_`             |
+
