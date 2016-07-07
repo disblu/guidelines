@@ -246,10 +246,10 @@ Instrument i =
 
 ### 2.2.6 Follow Field Naming Conventions
 
-- Non-public, non-static field names start with m.
-- Static field names start with s.
-- Other fields start with a lower case letter.
-- Public static final fields (constants) are ALL_CAPS_WITH_UNDERSCORES.
+- Non-public, non-static field names start with **m**.
+- Static field names start with **s**.
+- Other fields start with a **lower case** letter.
+- Public static final fields (constants) are **ALL_CAPS_WITH_UNDERSCORES**.
 
 Example:
 
@@ -264,8 +264,19 @@ public class MyClass {
 }
 ```
 
-### 2.2.7 Use Standard Brace Style
+#### 2.2.6.1 Class member ordering
+Besides there is no standard or a right solution we recommend to follow the next order.
 
+- Constants
+- Fields
+    - Static variables  (public , protected and private in that order)
+    - Instance variables (public, protected and private in that order)
+- Constructors
+- Override methods
+- Public methods
+- Private methds
+
+### 2.2.7 Use Standard Brace Style
 
 Example:
 
