@@ -263,3 +263,43 @@ public class MyClass {
     protected int mProtected;
 }
 ```
+
+### 2.2.7 Use Standard Brace Style
+
+
+Example:
+
+```java
+class MyClass {
+    int func() {
+        if (something) {
+            // ...
+        } else if (somethingElse) {
+            // ...
+        } else {
+            // ...
+        }
+    }
+}
+```
+
+good:
+
+```java
+if (condition) {
+    body();
+}
+```
+
+acceptable:
+
+```java
+if (condition) body();
+```
+
+bad:
+
+```java
+if (condition)
+    body();
+```
