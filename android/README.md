@@ -2,7 +2,9 @@
 
 This guide contains a series of recommendations and rules for android developers. The main purpose is to build maintainable,  scalable, flexible and easy to read code for others developers.
 
-## 1.1 Project structure
+# 1 Project Structure
+
+### 1.1 File location
 
 The projects should follow the android gradle project structure. Gradle follows the concept of convention over configuration, providing sensible default option values when possible. The basic project starts with two components called “source sets”, one for the main source code and one for the test code. These live respectively in:
 
@@ -405,7 +407,7 @@ There is no general rule, but we recommend the next order:
 -  Style
 -  Layout width and layout height
 - Other layout attributes, sorted alphabetically
--  Remaining attributes, sorted alphabetically
+-  Custom attributes, sorted alphabetically
 
 
 # Thanks to
