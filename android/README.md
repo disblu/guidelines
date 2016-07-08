@@ -167,7 +167,7 @@ Makes it obvious what classes are actually used and the code is more readable fo
 
 ## 2.2 Java style rules
 
-There are conventions for using Android's Java libraries and tools.
+These are conventions for using Android's Java libraries and tools.
 
 ### 2.2.1 Use Javadoc Standard Comments
 
