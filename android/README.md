@@ -406,3 +406,13 @@ There is no general rule, but we recommend the next order:
 - Other layout attributes, sorted alphabetically
 -  Remaining attributes, sorted alphabetically
 
+
+# Thanks to
+
+This guide takes information from differences sources,   without them this guide couldn't exists:
+
+[Code Style for Contributors](https://source.android.com/source/code-style.html)
+
+[Android Best Practices](https://github.com/futurice/android-best-practices)
+
+[Stack-overflow](http://stackoverflow.com)
