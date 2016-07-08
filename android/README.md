@@ -76,6 +76,7 @@ Naming conventions for drawables:
 | Notification | `notification_`    | `notification_bg.9.png`     |
 | Tabs         | `tab_`            | `tab_pressed.9.png`         |
 
+Naming conventions for icons:
 
 | Asset Type                      | Prefix             | Example                      |
 | --------------------------------| ----------------   | ---------------------------- |
