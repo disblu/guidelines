@@ -398,7 +398,7 @@ Strings start with a prefix of the section they belong.
 
 ### 2.3.3 Order of attributes
 
-There is no general rule, but we recommend put the attribute using the next order:
+There is no general rule, but we recommend the next order:
 
 -  View Id
 -  Style
