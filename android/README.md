@@ -397,7 +397,7 @@ Strings start with a prefix of the section they belong.
 | `action_`            | An action such as "Save" or "Create"  |
 
 
-### 2.3.3 Order of attributes
+### 2.3.4 Order of attributes
 
 There is no general rule, but we recommend the next order:
 
