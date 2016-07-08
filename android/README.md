@@ -2,6 +2,43 @@
 
 This guide contains a series of recommendations and rules for android developers. The main purpose is to build maintainable,  scalable, flexible and easy to read code for others developers.
 
+**Table of Contents**
+
+- [1 Project Structure](#1-project-structure)
+	- [1.1 File location](#11-file-location)
+	- [1.2 File naming](#12-file-naming)
+		- [1.2.1 Class files](#121-class-files)
+		- [1.2.2 Resources files](#122-resources-files)
+			- [1.2.2.1 Drawable files](#1221-drawable-files)
+			- [1.2.2.2 Layout files](#1222-layout-files)
+			- [1.2.2.3 Menu files](#1223-menu-files)
+			- [1.2.2.4 Values files](#1224-values-files)
+- [2 Code guidelines](#2-code-guidelines)
+	- [2.1 Java language rules](#21-java-language-rules)
+		- [2.1.1 Don't ignore exceptions](#211-dont-ignore-exceptions)
+		- [2.1.2 Don't catch generic exception](#212-dont-catch-generic-exception)
+		- [2.1.3 Don't use finalizers](#213-dont-use-finalizers)
+		- [2.1.4 Fully qualify imports](#214-fully-qualify-imports)
+	- [2.2 Java style rules](#22-java-style-rules)
+		- [2.2.1 Use Javadoc Standard Comments](#221-use-javadoc-standard-comments)
+		- [2.2.2 Write Short Methods](#222-write-short-methods)
+		- [2.2.3 Define Fields in Standard Places](#223-define-fields-in-standard-places)
+		- [2.2.4 Limit Variable Scope](#224-limit-variable-scope)
+		- [2.2.5 Use Spaces for Indentation](#225-use-spaces-for-indentation)
+		- [2.2.6 Follow Field Naming Conventions](#226-follow-field-naming-conventions)
+			- [2.2.6.1 Class member ordering](#2261-class-member-ordering)
+		- [2.2.7 Use Standard Brace Style](#227-use-standard-brace-style)
+		- [2.2.8 Limit Line Length](#228-limit-line-length)
+		- [2.2.9 Treat Acronyms as Words](#229-treat-acronyms-as-words)
+		- [2.2.10 TODO Comments](#2210-todo-comments)
+	- [2.3 XML style rules](#23-xml-style-rules)
+		- [2.3.1 Closing tags](#231-closing-tags)
+		- [2.3.2 Resource naming](#232-resource-naming)
+			- [2.3.2.1 Id Naming](#2321-id-naming)
+		- [2.3.3 String naming](#233-string-naming)
+		- [2.3.4 Order of attributes](#234-order-of-attributes)
+- [Thanks to](#thanks-to)
+
 # 1 Project Structure
 
 ### 1.1 File location
