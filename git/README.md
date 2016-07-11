@@ -26,6 +26,21 @@ Links to download git:
  - [Linux](https://git-scm.com/download/linux)
  - [Windows](https://git-scm.com/download/windows)
 
+# 2 How it works?
+
+Instead of thinking of the differences between each file across time,  git uses snapshots, it means git makes a copy of the whole directory (only to the files that changed) This is essentially what Git is.
+
+## 2.1 Integrity
+
+Everything in Git is check-summed before it is stored and is then referred to by that checksum. This means it’s impossible to change the contents of any file or directory without Git knowing about it.
+
+## 2.2 States
+
+Git has three main states that your files can reside in: committed, modified, and staged.
+
+- **Committed** means that the data is safely stored in your local database.
+- **Modified** means that you have changed the file but have not committed it to your database yet.
+- **Staged** means that you have marked a modified file in its current version to go into your next commit snapshot.
 
 # 3 Terminology
 
