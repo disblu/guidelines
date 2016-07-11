@@ -199,7 +199,6 @@ Android doesn't use finalizers. In most cases, you can do what you need from a f
 ```java
 
 public class MyClass {
-
    public static void main(String[] args) {
        try {
            MyClass cal = new MyClass();
