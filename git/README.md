@@ -44,6 +44,17 @@ Git has three main states that your files can reside in: committed, modified, an
 
 # 3 How to use it?
 
+## 3.1 Configuration
+
+If you haven't use git before you need to setup a basic configuration, the first thing you need to do is to tell git who you are.   The name and email will be used by git to identify the person who is making the changes.
+
+```bash
+$ git config --global user.name "Disblu"
+$ git config --global user.email dev@disblu.com
+```
+
+
+
 # 4 Alternatives
 
 # Thanks to
