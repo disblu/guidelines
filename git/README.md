@@ -14,7 +14,7 @@ Version control software allows you to have “versions” of a project, which s
 
 The benefits of a system like this is that multiple developers can make changes, and each change can then be attributed to a specific developer.
 
-## 1.3 Setup
+## 1.3 Download
 
 At this point , you may have asked yourself some questions like: How do I get this awesome tool?, is it free? Well git is completely free and its also open source. And its available for mac, linux and windows users.
 
@@ -42,7 +42,7 @@ Git has three main states that your files can reside in: committed, modified, an
 - **Modified** means that you have changed the file but have not committed it to your database yet.
 - **Staged** means that you have marked a modified file in its current version to go into your next commit snapshot.
 
-# 3 Terminology
+# 3 How to use it?
 
 # 4 Alternatives
 
