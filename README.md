@@ -2,6 +2,7 @@
 # Disblu Guidelines
 
 * [Android](https://github.com/disblu/guidelines/tree/master/android)
+* [Git](https://github.com/disblu/guidelines/tree/master/git)
 
 
 Contributing
