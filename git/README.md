@@ -26,7 +26,7 @@ Links to download git:
  - [Linux](https://git-scm.com/download/linux)
  - [Windows](https://git-scm.com/download/windows)
 
-# 2 How it works
+# 2 How it works?
 
 Instead of thinking of the differences between each file across time,  git uses snapshots, it means git makes a copy of the whole directory (only to the files that changed) This is essentially what Git is.
 
@@ -42,7 +42,7 @@ Git has three main states that your files can reside in: committed, modified, an
 - **Modified** means that you have changed the file but have not committed it to your database yet.
 - **Staged** means that you have marked a modified file in its current version to go into your next commit snapshot.
 
-# 3 How to use it?
+# 3 How to use it
 
 ## 3.1 Identify yourself
 
@@ -60,6 +60,23 @@ You can configure the default text editor, if you don't do so git is going to us
 ```bash
 $ git config --global core.editor "vim"
 ```
+
+## 3.3 Current configuration
+
+You can check your current configuration using the next command:
+
+```bash
+$ git config --list
+user.name=Disblu
+user.email=dev@disblu.com
+color.status=auto
+color.branch=auto
+color.interactive=auto
+color.diff=auto
+...
+```
+
+## 3.4 Basic commands
 
 # 4 Alternatives
 
