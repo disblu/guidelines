@@ -463,7 +463,7 @@ There is no general rule, but we recommend the next order:
 
 # Thanks to
 
-This guide takes information from differences sources,   without them this guide couldn't exists:
+This guide takes information from differences sources,   without them this guide couldn't exist:
 
 [Code Style for Contributors](https://source.android.com/source/code-style.html)
 

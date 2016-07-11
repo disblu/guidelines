@@ -26,7 +26,7 @@ Links to download git:
  - [Linux](https://git-scm.com/download/linux)
  - [Windows](https://git-scm.com/download/windows)
 
-# 2 How it works?
+# 2 How it works
 
 Instead of thinking of the differences between each file across time,  git uses snapshots, it means git makes a copy of the whole directory (only to the files that changed) This is essentially what Git is.
 
@@ -55,7 +55,7 @@ $ git config --global user.email dev@disblu.com
 
 ## 3.2 Text Editor
 
-You can configure the default text editor, if you don't do so. Git is going to use your default text editor. We recommend to use vim.
+You can configure the default text editor, if you don't do so git is going to use your default text editor. We recommend to use vim.
 
 ```bash
 $ git config --global core.editor "vim"
@@ -65,7 +65,7 @@ $ git config --global core.editor "vim"
 
 # Thanks to
 
-This guide takes information from differences sources,   without them this guide couldn't exists:
+This guide takes information from differences sources,   without them this guide couldn't exist:
 
 [Git (Software)](https://en.wikipedia.org/wiki/Git_(software))
 
