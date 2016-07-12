@@ -4,7 +4,7 @@ The main purpose of this guide is not just explain git or  how to use it, it has
 
 # 1 Introduction
 
-## 1.1  What's Git?(and a little bit of history)
+## 1.1  What is Git? (and a little bit of history)
 Git is a version control system commonly used to software development.  Git development began in 2005 by Linus Torvalds, He wanted a distributed system that could be used like [BitKeeper](https://en.wikipedia.org/wiki/BitKeeper) unfortunately to him (lucky to us),  there was no free software with those capabilities.
 
 
@@ -16,7 +16,7 @@ The benefits of a system like this is that multiple developers can make changes,
 
 ## 1.3 Download
 
-At this point , you may have asked yourself some questions like: How do I get this awesome tool?, is it free? Well git is completely free and its also open source. And its available for mac, linux and windows users.
+At this point, you may have asked yourself some questions like: How do I get this awesome tool?, is it free? Well git is completely free and its also open source. And its available for mac, linux and windows users.
 
 If you are a mac or linux user a old version of git is probably already installed on your computer, if you are window user you need to download it.
 
@@ -26,7 +26,7 @@ Links to download git:
  - [Linux](https://git-scm.com/download/linux)
  - [Windows](https://git-scm.com/download/windows)
 
-# 2 How it works?
+# 2 How it works
 
 Instead of thinking of the differences between each file across time,  git uses snapshots, it means git makes a copy of the whole directory (only to the files that changed) This is essentially what Git is.
 
