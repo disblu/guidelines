@@ -78,6 +78,64 @@ color.diff=auto
 
 ## 3.4 Basic commands
 
+### 3.4.1 Creating a new repository
+
+Before to being able to star tracking the changes on your project you need to initialise the git repository.  Just go to the root of the project and use the next command:
+
+```bash
+$ git init
+```
+
+### 3.4.2 Tracking files
+
+If the project has already some files ,  the first thing you should do,  it's to keep track of those files.
+
+```bash
+$ git add [file name or regex]
+```
+
+### 3.4.3 Cloning a repository
+
+Sometimes you need to work using an existing repository,  you can use the `clone` commando to do so.
+
+```bash
+$ git clone [url]
+```
+
+### 3.4.4 Log
+
+If you started from an existing repository,  maybe you want to look back to see what has happened.  The command `log` is the most appropriate for this situation.
+
+```bash
+$ git log
+commit ca82a6dff817ec66f44342007202690a93763949
+Author: Albert <albert@disblu.com>
+Date:   Mon Mar 17 21:52:11 2008 -0700
+
+    Add devise gem
+
+commit 085bb3bcb608e1e8451d4b2432f8ecbe6306e7e7
+Author: Julian  <julian@disblu.com>
+Date:   Sat Mar 15 16:40:33 2008 -0700
+
+    Add git ignore
+
+commit a11bef06a3f659402fe7563abf99ad00de2209e6
+Author: Frans <frans@disblu.com>
+Date:   Sat Mar 15 10:31:28 2008 -0700
+
+    Initial commit
+```
+
+The `log` command has a lot of options you can user to filter and give format to the output. For example you can use the `-- online` and will show you something like this:
+
+```bash
+$ git log --oneline
+ca82a6d Add devise gem
+085bb3b Add git ignore
+a11bef0 Initial commit
+```
+
 # 4 Alternatives
 
 # Thanks to
