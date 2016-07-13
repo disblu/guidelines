@@ -4,7 +4,7 @@ The main purpose of this guide is not just explain git or  how to use it, it has
 
 # 1 Introduction
 
-## 1.1  What is Git? (and a little bit of history)
+## 1.1  What's Git?(and a little bit of history)
 Git is a version control system commonly used to software development.  Git development began in 2005 by Linus Torvalds, He wanted a distributed system that could be used like [BitKeeper](https://en.wikipedia.org/wiki/BitKeeper) unfortunately to him (lucky to us),  there was no free software with those capabilities.
 
 
@@ -88,11 +88,21 @@ $ git init
 
 ### 3.4.2 Tracking files
 
-If the project has already some files ,  the first thing you should do,  it's to keep track of those files.
+If the project has already some files ,  the first thing you should do,  it's to keep track of those files.  You can use the `add` command to stage the files you want to include in the commit.
 
 ```bash
 $ git add [file name or regex]
 ```
+
+Once you added the files you want to include, it's time to save those changes.  The `commit ` command will do that for us.
+
+```bash
+$ git commit -m [a message describing the changes]
+```
+
+The parameters `-m` means that the following text will be the message for that commit.
+
+The command `commit` has a numerous amount of parameters,  you can read more about this [here](https://git-scm.com/docs/git-commit).
 
 ### 3.4.3 Cloning a repository
 
@@ -127,7 +137,7 @@ Date:   Sat Mar 15 10:31:28 2008 -0700
     Initial commit
 ```
 
-The `log` command has a lot of options you can user to filter and give format to the output. For example you can use the `-- online` and will show you something like this:
+The `log` command has a lot of options you can use to filter and give format to the output. For example you can use the `-- online` and will show you something like this:
 
 ```bash
 $ git log --oneline
@@ -135,6 +145,11 @@ ca82a6d Add devise gem
 085bb3b Add git ignore
 a11bef0 Initial commit
 ```
+
+[Here](https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History) you can find a bunch of options for the `log` command.
+
+### 3.4.5 Log
+
 
 # 4 Alternatives
 
