@@ -161,10 +161,9 @@ a11bef0 Initial commit
 
 To read more about the `log` command click [here](https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History).
 
-### 3.4.5 Log
+### 3.4.5 Branches
 
-
-# 4 Alternatives
+Unitl now we have been working on the same branch ("master").  But What a branch actually is? A branch represents an independent line of development. New commits are recorded in the history for the current branch, which results in a fork in the history of the project.
 
 # Thanks to
 
@@ -175,3 +174,5 @@ This guide takes information from differences sources,   without them this guide
 [Git Guide by Roger  ](http://rogerdudler.github.io/git-guide/)
 
 [Quora](https://www.quora.com/What-is-git-and-why-should-I-use-it)
+
+[Atlassian Git tutorial](https://www.atlassian.com/git/tutorials/using-branches/git-branch)
