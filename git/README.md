@@ -88,7 +88,19 @@ $ git init
 
 ### 3.4.2 Tracking files
 
-If the project has already some files ,  the first thing you should do,  it's to keep track of those files.  You can use the `add` command to stage the files you want to include in the commit.
+Before to start adding files to staging,  maybe you want to use the `status` command to know more about the state of the repository.  It gives you information about the files that changed and about what will be include in the commit.
+
+```bash
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+    modified:   git/README.md
+```
+
+If you made changes to the project,  probably it's good time to keep track of those files.  You can use the `add` command to stage the files you want to include in the commit.
 
 ```bash
 $ git add [file name or regex]
@@ -102,7 +114,7 @@ $ git commit -m [a message describing the changes]
 
 The parameters `-m` means that the following text will be the message for that commit.
 
-The command `commit` has a numerous amount of parameters,  you can read more about this [here](https://git-scm.com/docs/git-commit).
+The command `commit` has a numerous amount of parameters,  you can read more about it [here](https://git-scm.com/docs/git-commit).
 
 ### 3.4.3 Cloning a repository
 
@@ -146,7 +158,8 @@ ca82a6d Add devise gem
 a11bef0 Initial commit
 ```
 
-[Here](https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History) you can find a bunch of options for the `log` command.
+
+To read more about the `log` command click [here](https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History).
 
 ### 3.4.5 Log
 
