@@ -2,9 +2,8 @@
 
 The main purpose of this guide is not just explain git or  how to use it, it has the intention of create a culture and consciousness between developers of the importance of using a version control.
 
-- [Git Walkthrough](#)
-- [1 Introduction](#)
-    - [1.1  What's Git?(and a little bit of history)](#)
+- [1 Introduction](#-1-Introduction)
+    - [1.1  What's Git?(and a little bit of history)](#11)
     - [1.2 Why should I use Git?](#)
     - [1.3 Download](#)
 - [2 How it works](#)
@@ -108,7 +107,7 @@ $ git init
 
 ### 3.4.2 Tracking files
 
-Before to start adding files to staging,  maybe you want to use the `status` command to know more about the state of the repository.  It gives you information about the files that changed and about what will be include in the commit.
+Before to start adding files to staging,  maybe you want to use the `status` command to know more about the state of the repository.  It gives you information about the files that changed and about what will be include to the commit.
 
 ```bash
 $ git status
@@ -120,7 +119,7 @@ Changes to be committed:
     modified:   git/README.md
 ```
 
-If you made changes to the project,  probably it's good time to keep track of those files.  You can use the `add` command to stage the files you want to include in the commit.
+If you made changes to the project, it is probably a good time to keep track of those files.  You can use the `add` command to stage the files you want to include to the commit.
 
 ```bash
 $ git add [file name or regex]
@@ -169,7 +168,7 @@ Date:   Sat Mar 15 10:31:28 2008 -0700
     Initial commit
 ```
 
-The `log` command has a lot of options you can use to filter and give format to the output. For example you can use the `-- online` and will show you something like this:
+The log command has many options you can use to filter and give format to the output. For example you can use the --oneline and it will show you something like this:
 
 ```bash
 $ git log --oneline
@@ -183,7 +182,7 @@ To read more about the `log` command click [here](https://git-scm.com/book/en/v2
 
 ### 3.4.5 Branches
 
-Unitl now we have been working on the same branch ("master").  But What a branch actually is? A branch represents an independent line of development. New commits are recorded in the history for the current branch, which results in a fork in the history of the project.
+Until now we have been working on the same branch ("master").  But What is a branch? A branch represents an independent line of development. New commits are recorded in the history for the current branch, which results in a fork in the history of the project.
 
 # Thanks to
 
