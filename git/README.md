@@ -2,6 +2,26 @@
 
 The main purpose of this guide is not just explain git or  how to use it, it has the intention of create a culture and consciousness between developers of the importance of using a version control.
 
+- [Git Walkthrough](#)
+- [1 Introduction](#)
+    - [1.1  What's Git?(and a little bit of history)](#)
+    - [1.2 Why should I use Git?](#)
+    - [1.3 Download](#)
+- [2 How it works](#)
+    - [2.1 Integrity](#)
+    - [2.2 States](#)
+- [3 How to use it](#)
+    - [3.1 Identify yourself](#)
+    - [3.2 Text Editor](#)
+    - [3.3 Current configuration](#)
+    - [3.4 Basic commands](#)
+        - [3.4.1 Creating a new repository](#)
+        - [3.4.2 Tracking files](#)
+        - [3.4.3 Cloning a repository](#)
+        - [3.4.4 Log](#)
+        - [3.4.5 Branches](#)
+- [Thanks to](#)
+
 # 1 Introduction
 
 ## 1.1  What's Git?(and a little bit of history)
