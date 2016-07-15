@@ -20,6 +20,8 @@ The main purpose of this guide is not just explain git or  how to use it, it has
         - [3.4.4 Log](#344-log)
         - [3.4.5 Branches](#345-branches)
         - [3.4.6 Merging](#346-merging)
+        - [3.4.7 Resolving merge conflicts](#347-resolving-merge-conflicts)
+- [4 Alternatives](#4-alternatives)
 - [Thanks to](#thanks-to)
 
 # 1 Introduction
@@ -231,9 +233,15 @@ Merge the specified branch into the current branch.
 $ git merge [branch name]
 ```
 
-### 3.4.6 Resolving merge conflicts
+### 3.4.7 Resolving merge conflicts
 
 Most of the time,  git is going to be able to merge everything automatically but sometimes git needs a little bit your help. If the two branches you‘re trying to merge both changed the same part of the same file, Git won’t be able to figure out which version to use. When such a situation occurs, it stops right before the merge commit so that you can resolve the conflicts manually.
+
+# 4 Alternatives
+
+Like we said before the main purpose of this guide is promote between developers the use of a version control system.  Besides how much we love git, we know there are more version control systems.  We cannot say that git is better or worse than others, every version has advantages and disadvantages.
+
+You can find a full list of version control systems [here](https://en.wikipedia.org/wiki/List_of_version_control_software).
 
 # Thanks to
 
