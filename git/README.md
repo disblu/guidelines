@@ -231,6 +231,10 @@ Merge the specified branch into the current branch.
 $ git merge [branch name]
 ```
 
+### 3.4.6 Resolving merge conflicts
+
+Most of the time,  git is going to be able to merge everything automatically but sometimes git needs a little bit your help. If the two branches you‘re trying to merge both changed the same part of the same file, Git won’t be able to figure out which version to use. When such a situation occurs, it stops right before the merge commit so that you can resolve the conflicts manually.
+
 # Thanks to
 
 This guide takes information from differences sources,   without them this guide couldn't exist:
