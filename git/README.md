@@ -19,7 +19,7 @@ The main purpose of this guide is not just explain git or  how to use it, it has
 		- [3.4.3 Cloning a repository](#343-cloning-a-repository)
 		- [3.4.4 Log](#344-log)
 		- [3.4.5 Branches](#345-branches)
-- [Thanks to](#)
+- [Thanks to](#thanks-to)
 
 # 1 Introduction
 
