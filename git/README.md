@@ -184,6 +184,35 @@ To read more about the `log` command click [here](https://git-scm.com/book/en/v2
 
 Until now we have been working on the same branch ("master").  But What is a branch? A branch represents an independent line of development. New commits are recorded in the history for the current branch, which results in a fork in the history of the project.
 
+List all of the branches in your repository.
+
+```bash
+$ git branch
+```
+
+Create a new branch. This does not check out the new branch.
+
+```bash
+$ git branch [branch name]
+```
+
+Delete the specified branch. This is a “safe” operation in that Git prevents you from deleting the branch if it has unmerged changes.
+
+```bash
+$ git branch -d [branch name]
+```
+
+Force delete the specified branch, even if it has unmerged changes.
+
+```bash
+$ git branch -D [branch name]
+```
+
+If you want to create a new branch and do a checkout you can use the next command:
+
+```bash
+$ git checkout -b [branch name]
+```
 # Thanks to
 
 This guide takes information from differences sources,   without them this guide couldn't exist:
