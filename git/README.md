@@ -3,22 +3,22 @@
 The main purpose of this guide is not just explain git or  how to use it, it has the intention of create a culture and consciousness between developers of the importance of using a version control.
 
 - [1 Introduction](#1-introduction)
-	- [1.1 What is git?](#11-what-is-git)
-	- [1.2 Why should I use git?](#12-why-should-i-use-git)
-	- [1.3 Download](#13-download)
+    - [1.1 What is git?](#11-what-is-git)
+    - [1.2 Why should I use git?](#12-why-should-i-use-git)
+    - [1.3 Download](#13-download)
 - [2 How it works](#2-how-it-works)
-	- [2.1 Integrity](#21-integrity)
-	- [2.2 States](#22-states)
+    - [2.1 Integrity](#21-integrity)
+    - [2.2 States](#22-states)
 - [3 How to use it](#3-how-to-use-it)
-	- [3.1 Identify yourself](#31-identify-yourself)
-	- [3.2 Text Editor](#32-text-editor)
-	- [3.3 Current configuration](#33-current-configuration)
-	- [3.4 Basic commands](#34-basic-commands)
-		- [3.4.1 Creating a new repository](#341-creating-a-new-repository)
-		- [3.4.2 Tracking files](#342-tracking-files)
-		- [3.4.3 Cloning a repository](#343-cloning-a-repository)
-		- [3.4.4 Log](#344-log)
-		- [3.4.5 Branches](#345-branches)
+    - [3.1 Identify yourself](#31-identify-yourself)
+    - [3.2 Text Editor](#32-text-editor)
+    - [3.3 Current configuration](#33-current-configuration)
+    - [3.4 Basic commands](#34-basic-commands)
+        - [3.4.1 Creating a new repository](#341-creating-a-new-repository)
+        - [3.4.2 Tracking files](#342-tracking-files)
+        - [3.4.3 Cloning a repository](#343-cloning-a-repository)
+        - [3.4.4 Log](#344-log)
+        - [3.4.5 Branches](#345-branches)
 - [Thanks to](#thanks-to)
 
 # 1 Introduction
@@ -208,11 +208,19 @@ Force delete the specified branch, even if it has unmerged changes.
 $ git branch -D [branch name]
 ```
 
-If you want to create a new branch and do a checkout you can use the next command:
+If you want to move to another branch you can use the `checkout` command
+
+``` bash
+$ git checkout [branch name]
+```
+
+But in some cases you want to move and create a new branch at same time,  you can use the `-b` option:
 
 ```bash
 $ git checkout -b [branch name]
 ```
+
+
 # Thanks to
 
 This guide takes information from differences sources,   without them this guide couldn't exist:
