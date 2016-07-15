@@ -2,32 +2,32 @@
 
 The main purpose of this guide is not just explain git or  how to use it, it has the intention of create a culture and consciousness between developers of the importance of using a version control.
 
-- [1 Introduction](#-1-Introduction)
-    - [1.1  What's Git?(and a little bit of history)](#11)
-    - [1.2 Why should I use Git?](#)
-    - [1.3 Download](#)
+- [1 Introduction](#1-introduction)
+	- [1.1 What is git?](#11-what-is-git)
+	- [1.2 Why should I use git?](#12-why-should-i-use-git)
+	- [1.3 Download](#13-download)
 - [2 How it works](#)
-    - [2.1 Integrity](#)
-    - [2.2 States](#)
+	- [2.1 Integrity](#)
+	- [2.2 States](#)
 - [3 How to use it](#)
-    - [3.1 Identify yourself](#)
-    - [3.2 Text Editor](#)
-    - [3.3 Current configuration](#)
-    - [3.4 Basic commands](#)
-        - [3.4.1 Creating a new repository](#)
-        - [3.4.2 Tracking files](#)
-        - [3.4.3 Cloning a repository](#)
-        - [3.4.4 Log](#)
-        - [3.4.5 Branches](#)
+	- [3.1 Identify yourself](#)
+	- [3.2 Text Editor](#)
+	- [3.3 Current configuration](#)
+	- [3.4 Basic commands](#)
+		- [3.4.1 Creating a new repository](#)
+		- [3.4.2 Tracking files](#)
+		- [3.4.3 Cloning a repository](#)
+		- [3.4.4 Log](#)
+		- [3.4.5 Branches](#)
 - [Thanks to](#)
 
 # 1 Introduction
 
-## 1.1  What's Git?(and a little bit of history)
+## 1.1 What is git?
 Git is a version control system commonly used to software development.  Git development began in 2005 by Linus Torvalds, He wanted a distributed system that could be used like [BitKeeper](https://en.wikipedia.org/wiki/BitKeeper) unfortunately to him (lucky to us),  there was no free software with those capabilities.
 
 
-## 1.2 Why should I use Git?
+## 1.2 Why should I use git?
 
 Version control software allows you to have “versions” of a project, which show the changes that were made to the code over time, and allows you to backtrack if necessary and undo those changes.
 
