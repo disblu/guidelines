@@ -19,6 +19,7 @@ The main purpose of this guide is not just explain git or  how to use it, it has
         - [3.4.3 Cloning a repository](#343-cloning-a-repository)
         - [3.4.4 Log](#344-log)
         - [3.4.5 Branches](#345-branches)
+        - [3.4.6 Merging](#346-merging)
 - [Thanks to](#thanks-to)
 
 # 1 Introduction
@@ -220,6 +221,15 @@ But in some cases you want to move and create a new branch at same time,  you ca
 $ git checkout -b [branch name]
 ```
 
+### 3.4.6 Merging
+
+Merging is Git's way of putting a forked history back together again. The git merge command lets you take the independent lines of development created by git branch and integrate them into a single branch.
+
+Merge the specified branch into the current branch.
+
+```bash
+$ git merge [branch name]
+```
 
 # Thanks to
 
