@@ -236,13 +236,23 @@ $ git merge [branch name]
 
 ### 3.4.7 Resolving merge conflicts
 
-Most of the time,  git is going to be able to merge everything automatically but sometimes git needs a little bit your help. If the two branches you‘re trying to merge both changed the same part of the same file, Git won’t be able to figure out which version to use. When such a situation occurs, it stops right before the merge commit so that you can resolve the conflicts manually.
+Most of the time,  git is going to be able to merge everything automatically but sometimes git needs some help. If the two branches you‘re trying to merge both changed the same part of the same file, git won’t be able to figure out which version to use. When such a situation occurs, it stops right before the merge commit so that you can resolve the conflicts manually.
 
 # 4 Conventions
 
 ## 4.1 Branch naming
 
-Choose short and descriptive names, if you are working with a group of developers,  the branch name usually starts with the initials of the person. For example:
+Choose short and descriptive names:
+
+```bash
+# good
+$ git checkout -b fix_login_module
+
+# bad
+$ git checkout -b fix_something
+```
+
+If you are working with a group of developers,  the branch name usually starts with the initials of the person. For example:
 
 If your name is Juan Perez
 
@@ -252,16 +262,6 @@ $ git checkout -b jp_refactor_login_module
 
 # bad - It doesn't tell you who is the owner of the branch
 $ git checkout -b refactor_login_module
-```
-
-Make it descriptive :
-
-```bash
-# good
-$ git checkout -b fix_login_module
-
-# bad
-$ git checkout -b fix_something
 ```
 
 ## 4.2 Commits
@@ -281,10 +281,6 @@ Always think about the 7 rules of a great commit message.
  5. Use the **imperative mood** in the subject line
  6. Wrap the body at **72 characters**
  7. Use the body to explain what and **why vs. how**
-
-If a commit A depends on commit B, the dependency should be stated in the message of commit A. Use the SHA1 when referring to commits.
-
-## 4.3
 
 # 5 Alternatives
 
