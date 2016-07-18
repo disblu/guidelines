@@ -268,7 +268,9 @@ $ git checkout -b refactor_login_module
 
 ### 4.2.1 Structure
 
-Each commit should be a single logical change. Don't make several logical changes in one commit.
+ - Each commit should be a single logical change.
+ - Don't make several logical changes in one commit.
+ - Don't split a single logical change into several commits.
 
 ### 4.2.2 Message
 
@@ -281,6 +283,19 @@ Always think about the 7 rules of a great commit message.
  5. Use the **imperative mood** in the subject line
  6. Wrap the body at **72 characters**
  7. Use the body to explain what and **why vs. how**
+
+## 4.3 Merging
+
+**Do not rewrite published history.** (Don't use push --force) The repository's history is valuable in its own right and it is very important to be able to tell what actually happened. Altering published history is a common source of problems for anyone working on the project.
+
+If your branch includes more than one commit, do not merge with a fast-forward:
+
+```bash
+# good
+$ git merge --no-ff [branch name]
+# bad
+$ git merge [branch name]
+```
 
 # 5 Alternatives
 
