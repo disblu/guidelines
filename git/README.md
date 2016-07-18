@@ -21,7 +21,8 @@ The main purpose of this guide is not just explain git or  how to use it, it has
         - [3.4.5 Branches](#345-branches)
         - [3.4.6 Merging](#346-merging)
         - [3.4.7 Resolving merge conflicts](#347-resolving-merge-conflicts)
-- [4 Alternatives](#4-alternatives)
+- [4 Conventions](#4-conventions)
+- [5 Alternatives](#5-alternatives)
 - [Thanks to](#thanks-to)
 
 # 1 Introduction
@@ -237,7 +238,55 @@ $ git merge [branch name]
 
 Most of the time,  git is going to be able to merge everything automatically but sometimes git needs a little bit your help. If the two branches you‘re trying to merge both changed the same part of the same file, Git won’t be able to figure out which version to use. When such a situation occurs, it stops right before the merge commit so that you can resolve the conflicts manually.
 
-# 4 Alternatives
+# 4 Conventions
+
+## 4.1 Branch naming
+
+Choose short and descriptive names, if you are working with a group of developers,  the branch name usually starts with the initials of the person. For example:
+
+If your name is Juan Perez
+
+```bash
+# good
+$ git checkout -b jp_refactor_login_module
+
+# bad - It doesn't tell you who is the owner of the branch
+$ git checkout -b refactor_login_module
+```
+
+Make it descriptive :
+
+```bash
+# good
+$ git checkout -b fix_login_module
+
+# bad
+$ git checkout -b fix_something
+```
+
+## 4.2 Commits
+
+### 4.2.1 Structure
+
+Each commit should be a single logical change. Don't make several logical changes in one commit.
+
+### 4.2.2 Message
+
+Always think about the 7 rules of a great commit message.
+
+ 1. Separate subject from body with a blank line
+ 2. Limit the subject line to **50 characters**
+ 3. **Capitalize** the subject line
+ 4. Do not end the subject line with a period
+ 5. Use the **imperative mood** in the subject line
+ 6. Wrap the body at **72 characters**
+ 7. Use the body to explain what and **why vs. how**
+
+If a commit A depends on commit B, the dependency should be stated in the message of commit A. Use the SHA1 when referring to commits.
+
+## 4.3
+
+# 5 Alternatives
 
 Like we said before the main purpose of this guide is promote between developers the use of a version control system.  Besides how much we love git, we know there are more version control systems.  We cannot say that git is better or worse than others, every version has advantages and disadvantages.
 
@@ -254,3 +303,5 @@ This guide takes information from differences sources,   without them this guide
 [Quora](https://www.quora.com/What-is-git-and-why-should-I-use-it)
 
 [Atlassian Git tutorial](https://www.atlassian.com/git/tutorials/using-branches/git-branch)
+
+[Git by Chris](http://chris.beams.io/posts/git-commit/)
