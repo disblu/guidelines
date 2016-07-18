@@ -22,6 +22,11 @@ The main purpose of this guide is not just explain git or  how to use it, it has
         - [3.4.6 Merging](#346-merging)
         - [3.4.7 Resolving merge conflicts](#347-resolving-merge-conflicts)
 - [4 Conventions](#4-conventions)
+     - [4.1 Branch naming](#41-branch-naming)
+     - [4.2 Commits](#42-commits)
+        - [4.2.1 Structure](#421-structure)
+        - [4.2.2 Message](#422-message)
+     - [4.3 Merging](#43-merging)
 - [5 Alternatives](#5-alternatives)
 - [Thanks to](#thanks-to)
 
