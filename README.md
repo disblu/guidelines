@@ -8,7 +8,7 @@
 Contributing
 ------------
 
-Everyone is freely to collaborate and submit pull request if needed.
+Everyone is free to collaborate and submit pull request if needed.
 
 **if you have commit access, you should wait no more than a week for the team to give feedback**.
 

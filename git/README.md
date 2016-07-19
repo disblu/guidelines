@@ -142,11 +142,21 @@ Once you added the files you want to include, it's time to save those changes.  
 $ git commit -m [a message describing the changes]
 ```
 
-The parameters `-m` means that the following text will be the message for that commit.
+The parameters `-m` means that the following text will be the message for that commit (The command `commit` has a numerous amount of parameters,  you can read more about it [here](https://git-scm.com/docs/git-commit)).
 
-The command `commit` has a numerous amount of parameters,  you can read more about it [here](https://git-scm.com/docs/git-commit).
 
-If you added some file by error and you
+
+If you added some file by error and you want to unstage the file just run the following command:
+
+```bash
+$ git reset HEAD [file name]
+```
+
+Also if you want discard changes , you can use the checkout command:
+
+```bash
+$ git checkout -- [file name]
+```
 
 ### 3.4.3 Ignoring files
 
