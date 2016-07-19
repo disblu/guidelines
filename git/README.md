@@ -22,6 +22,7 @@ The main purpose of this guide is not just explain git or  how to use it, it has
        - [3.4.6 Branches](#346-branches)
        - [3.4.7 Merging](#347-merging)
        - [3.4.8 Resolving merge conflicts](#348-resolving-merge-conflicts)
+       - [3.4.9 Stash](#349-stash)
 - [4 Conventions](#4-conventions)
     - [4.1 Branch naming](#41-branch-naming)
     - [4.2 Commits](#42-commits)
@@ -256,6 +257,22 @@ $ git merge [branch name]
 
 Most of the time,  git is going to be able to merge everything automatically but sometimes git needs some help. If the two branches you‘re trying to merge both changed the same part of the same file, git won’t be able to figure out which version to use. When such a situation occurs, it stops right before the merge commit so that you can resolve the conflicts manually.
 
+
+### 3.4.9 Stash
+
+Now let’s say we had to make an emergency fix to our project. We don’t want to commit an unfinished feature, and we also don’t want to lose our current work. The solution is to temporarily remove these changes with the git stash command:
+
+```bash
+$ git status
+$ git stash
+$ git status
+```
+
+If you want to get your changes back,  the option `pop`  applies the top stashed element and removes it from the stack.
+
+```bash
+$ git stash pop
+```
 # 4 Conventions
 
 ## 4.1 Branch naming
