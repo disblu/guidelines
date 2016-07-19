@@ -146,6 +146,8 @@ The parameters `-m` means that the following text will be the message for that c
 
 The command `commit` has a numerous amount of parameters,  you can read more about it [here](https://git-scm.com/docs/git-commit).
 
+If you added some file by error and you
+
 ### 3.4.3 Ignoring files
 
 Sometimes there are files you don't want to track (for example: binary files,  secret files, etc. ). You need to create a `.gitignore` file to tell git what files you want to ignore.

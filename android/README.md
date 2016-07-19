@@ -394,7 +394,7 @@ Use TODO comments whenever the code below is not perfect or is a hot fix.
 
 ### 2.3.1 Closing tags
 
-If the element doesn't have any content,  you must user self closing tags.
+If the element doesn't have any content,  you must use self closing tags.
 
 good:
 
