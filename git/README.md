@@ -3,30 +3,31 @@
 The main purpose of this guide is not just explain git or  how to use it, it has the intention of create a culture and consciousness between developers of the importance of using a version control.
 
 - [1 Introduction](#1-introduction)
-    - [1.1 What is git?](#11-what-is-git)
-    - [1.2 Why should I use git?](#12-why-should-i-use-git)
-    - [1.3 Download](#13-download)
+   - [1.1 What is git?](#11-what-is-git)
+   - [1.2 Why should I use git?](#12-why-should-i-use-git)
+   - [1.3 Download](#13-download)
 - [2 How it works](#2-how-it-works)
-    - [2.1 Integrity](#21-integrity)
-    - [2.2 States](#22-states)
+   - [2.1 Integrity](#21-integrity)
+   - [2.2 States](#22-states)
 - [3 How to use it](#3-how-to-use-it)
-    - [3.1 Identify yourself](#31-identify-yourself)
-    - [3.2 Text Editor](#32-text-editor)
-    - [3.3 Current configuration](#33-current-configuration)
-    - [3.4 Basic commands](#34-basic-commands)
-        - [3.4.1 Creating a new repository](#341-creating-a-new-repository)
-        - [3.4.2 Tracking files](#342-tracking-files)
-        - [3.4.3 Cloning a repository](#343-cloning-a-repository)
-        - [3.4.4 Log](#344-log)
-        - [3.4.5 Branches](#345-branches)
-        - [3.4.6 Merging](#346-merging)
-        - [3.4.7 Resolving merge conflicts](#347-resolving-merge-conflicts)
+   - [3.1 Identify yourself](#31-identify-yourself)
+   - [3.2 Text Editor](#32-text-editor)
+   - [3.3 Current configuration](#33-current-configuration)
+   - [3.4 Basic commands](#34-basic-commands)
+       - [3.4.1 Creating a new repository](#341-creating-a-new-repository)
+       - [3.4.2 Tracking files](#342-tracking-files)
+       - [3.4.3 Ignoring files](#343-ignoring-files)
+       - [3.4.4 Cloning a repository](#344-cloning-a-repository)
+       - [3.4.5 Log](#345-log)
+       - [3.4.6 Branches](#346-branches)
+       - [3.4.7 Merging](#347-merging)
+       - [3.4.8 Resolving merge conflicts](#348-resolving-merge-conflicts)
 - [4 Conventions](#4-conventions)
-     - [4.1 Branch naming](#41-branch-naming)
-     - [4.2 Commits](#42-commits)
-        - [4.2.1 Structure](#421-structure)
-        - [4.2.2 Message](#422-message)
-     - [4.3 Merging](#43-merging)
+    - [4.1 Branch naming](#41-branch-naming)
+    - [4.2 Commits](#42-commits)
+       - [4.2.1 Structure](#421-structure)
+       - [4.2.2 Message](#422-message)
+    - [4.3 Merging](#43-merging)
 - [5 Alternatives](#5-alternatives)
 - [Thanks to](#thanks-to)
 
@@ -50,9 +51,9 @@ If you are a mac or linux user a old version of git is probably already installe
 
 Links to download git:
 
- - [Mac](https://git-scm.com/download/mac)
- - [Linux](https://git-scm.com/download/linux)
- - [Windows](https://git-scm.com/download/windows)
+- [Mac](https://git-scm.com/download/mac)
+- [Linux](https://git-scm.com/download/linux)
+- [Windows](https://git-scm.com/download/windows)
 
 # 2 How it works
 
@@ -123,9 +124,9 @@ $ git status
 On branch master
 Your branch is up-to-date with 'origin/master'.
 Changes to be committed:
-  (use "git reset HEAD <file>..." to unstage)
+ (use "git reset HEAD <file>..." to unstage)
 
-    modified:   git/README.md
+   modified:   git/README.md
 ```
 
 If you made changes to the project, it is probably a good time to keep track of those files.  You can use the `add` command to stage the files you want to include to the commit.
@@ -144,7 +145,19 @@ The parameters `-m` means that the following text will be the message for that c
 
 The command `commit` has a numerous amount of parameters,  you can read more about it [here](https://git-scm.com/docs/git-commit).
 
-### 3.4.3 Cloning a repository
+### 3.4.3 Ignoring files
+
+Sometimes there are files you don't want to track (for example: binary files,  secret files, etc. ). You need to create a `.gitignore` file to tell git what files you want to ignore.
+
+You can specify entire directories in .gitignore or use the * wildcard to ignore files with a particular extension. For example:
+
+```bash
+*.bin
+*.DS_STORE
+/config/config.yml
+```
+
+### 3.4.4 Cloning a repository
 
 Sometimes you need to work using an existing repository,  you can use the `clone` commando to do so.
 
@@ -152,7 +165,7 @@ Sometimes you need to work using an existing repository,  you can use the `clone
 $ git clone [url]
 ```
 
-### 3.4.4 Log
+### 3.4.5 Log
 
 If you started from an existing repository,  maybe you want to look back to see what has happened.  The command `log` is the most appropriate for this situation.
 
@@ -162,19 +175,19 @@ commit ca82a6dff817ec66f44342007202690a93763949
 Author: Albert <albert@disblu.com>
 Date:   Mon Mar 17 21:52:11 2008 -0700
 
-    Add devise gem
+   Add devise gem
 
 commit 085bb3bcb608e1e8451d4b2432f8ecbe6306e7e7
 Author: Julian  <julian@disblu.com>
 Date:   Sat Mar 15 16:40:33 2008 -0700
 
-    Add git ignore
+   Add git ignore
 
 commit a11bef06a3f659402fe7563abf99ad00de2209e6
 Author: Frans <frans@disblu.com>
 Date:   Sat Mar 15 10:31:28 2008 -0700
 
-    Initial commit
+   Initial commit
 ```
 
 The log command has many options you can use to filter and give format to the output. For example you can use the --oneline and it will show you something like this:
@@ -189,7 +202,7 @@ a11bef0 Initial commit
 
 To read more about the `log` command click [here](https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History).
 
-### 3.4.5 Branches
+### 3.4.6 Branches
 
 Until now we have been working on the same branch ("master").  But What is a branch? A branch represents an independent line of development. New commits are recorded in the history for the current branch, which results in a fork in the history of the project.
 
@@ -229,7 +242,7 @@ But in some cases you want to move and create a new branch at same time,  you ca
 $ git checkout -b [branch name]
 ```
 
-### 3.4.6 Merging
+### 3.4.7 Merging
 
 Merging is Git's way of putting a forked history back together again. The git merge command lets you take the independent lines of development created by git branch and integrate them into a single branch.
 
@@ -239,7 +252,7 @@ Merge the specified branch into the current branch.
 $ git merge [branch name]
 ```
 
-### 3.4.7 Resolving merge conflicts
+### 3.4.8 Resolving merge conflicts
 
 Most of the time,  git is going to be able to merge everything automatically but sometimes git needs some help. If the two branches you‘re trying to merge both changed the same part of the same file, git won’t be able to figure out which version to use. When such a situation occurs, it stops right before the merge commit so that you can resolve the conflicts manually.
 
@@ -273,21 +286,21 @@ $ git checkout -b refactor_login_module
 
 ### 4.2.1 Structure
 
- - Each commit should be a single logical change.
- - Don't make several logical changes in one commit.
- - Don't split a single logical change into several commits.
+- Each commit should be a single logical change.
+- Don't make several logical changes in one commit.
+- Don't split a single logical change into several commits.
 
 ### 4.2.2 Message
 
 Always think about the 7 rules of a great commit message.
 
- 1. Separate subject from body with a blank line
- 2. Limit the subject line to **50 characters**
- 3. **Capitalize** the subject line
- 4. Do not end the subject line with a period
- 5. Use the **imperative mood** in the subject line
- 6. Wrap the body at **72 characters**
- 7. Use the body to explain what and **why vs. how**
+1. Separate subject from body with a blank line
+2. Limit the subject line to **50 characters**
+3. **Capitalize** the subject line
+4. Do not end the subject line with a period
+5. Use the **imperative mood** in the subject line
+6. Wrap the body at **72 characters**
+7. Use the body to explain what and **why vs. how**
 
 ## 4.3 Merging
 
