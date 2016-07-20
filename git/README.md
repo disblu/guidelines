@@ -323,14 +323,62 @@ $ git checkout -b refactor_login_module
 
 Always think about the 7 rules of a great commit message.
 
-1. Separate subject from body with a blank line
-2. Limit the subject line to **50 characters**
-3. **Capitalize** the subject line
-4. Do not end the subject line with a period
-5. Use the **imperative mood** in the subject line
-6. Wrap the body at **72 characters**
-7. Use the body to explain what and **why vs. how**
+- Separate subject from body with a blank line
 
+```
+Add news feed module
+
+It shows the news feed to the user, the datum is retrieved in batches (10 news each time)
+```
+-  Limit the subject line to **50 characters**
+```ruby
+# good
+"Add login module with omniauth (Facebook provider)"
+# bad
+"Add login module with omniauth, the user can only login using his Facebook account"
+```
+
+- **Capitalize** the subject line
+
+```ruby
+# good
+"Add visa and master card payment methods"
+# bad
+"add visa and master card payment methods"
+```
+-  Do not end the subject line with a period
+
+```ruby
+# good
+"Add push notifications p12 certificates "
+# bad
+"Add push notifications p12 certificates."
+```
+- Use the **imperative mood** in the subject line
+
+```ruby
+# good
+"Add user model and spec tests"
+# bad
+"Added user model and spec test"
+```
+- Wrap the body at **72 characters**
+
+Git **never** wraps text automatically. When you write the body of a commit message, you must mind its right margin, and wrap text manually.
+
+The recommendation is to do this at 72 characters, so that git has plenty of room to indent text while still keeping everything under 80 characters overall.
+
+- Use the body to explain what and **why vs. how**
+```
+commit eb0b56112492ab5c16c745e6da39c53126924ed6
+Author: Corgs Yerena <corgs@disblu.com>
+Date:   Wed Jul 10 10:57:55 2017 +0200
+
+   Update devise gem to 4.2
+
+   Replace devise deprecated methods, the Facebook login module
+   now doesn't require the birthday field to registrar a user.
+```
 ## 4.3 Merging
 
 **Do not rewrite published history.** (Don't use push --force) The repository's history is valuable in its own right and it is very important to be able to tell what actually happened. Altering published history is a common source of problems for anyone working on the project.
