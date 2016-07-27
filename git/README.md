@@ -1,6 +1,6 @@
 # Git Walkthrough
 
-The main purpose of this guide is not just explain git or  how to use it, it has the intention of create a culture and consciousness between developers of the importance of using a version control.
+The main purpose of this guide is not just explain git or how to use it, it has the intention of creating a culture and consciousness between developers of the importance of using a version control.
 
 - [1 Introduction](#1-introduction)
    - [1.1 What is git?](#11-what-is-git)
@@ -35,7 +35,7 @@ The main purpose of this guide is not just explain git or  how to use it, it has
 # 1 Introduction
 
 ## 1.1 What is git?
-Git is a version control system commonly used to software development.  Git development began in 2005 by Linus Torvalds, He wanted a distributed system that could be used like [BitKeeper](https://en.wikipedia.org/wiki/BitKeeper) unfortunately to him (lucky to us),  there was no free software with those capabilities.
+Git is a version control system commonly used to software development.  Git development began in 2005 by Linus Torvalds, he wanted a distributed system that could be used like [BitKeeper](https://en.wikipedia.org/wiki/BitKeeper) unfortunately to him (lucky to us),  there was no free software with those capabilities.
 
 
 ## 1.2 Why should I use git?
@@ -58,7 +58,7 @@ Links to download git:
 
 # 2 How it works
 
-Instead of thinking of the differences between each file across time,  git uses snapshots, it means git makes a copy of the whole directory (only to the files that changed) This is essentially what Git is.
+Instead of thinking of the differences between each file across time,  Git uses snapshots, it means Git makes a copy of the whole directory (only to the files that changed). This is essentially what Git is.
 
 ## 2.1 Integrity
 
@@ -76,7 +76,7 @@ Git has three main states that your files can reside in: committed, modified, an
 
 ## 3.1 Identify yourself
 
-If you haven't use git before you need to setup a basic configuration, the first thing you need to do is to tell git who you are.   The name and email will be used by git to identify the person who is making the changes.
+If you haven't use Git before you need to setup a basic configuration, the first thing you need to do is to tell Git who you are.   The name and email will be used by Git to identify the person who is making the changes.
 
 ```bash
 $ git config --global user.name "Disblu"
@@ -85,7 +85,7 @@ $ git config --global user.email dev@disblu.com
 
 ## 3.2 Text Editor
 
-You can configure the default text editor, if you don't do so git is going to use your default text editor. We recommend to use vim.
+You can configure the default text editor, if you don't do so Git is going to use your default text editor. We recommend to use vim.
 
 ```bash
 $ git config --global core.editor "vim"
@@ -110,7 +110,7 @@ color.diff=auto
 
 ### 3.4.1 Creating a new repository
 
-Before to being able to star tracking the changes on your project you need to initialise the git repository.  Just go to the root of the project and use the next command:
+Before to being able to star tracking the changes on your project you need to initialise the Git repository.  Just go to the root of the project and use the next command:
 
 ```bash
 $ git init
@@ -160,7 +160,7 @@ $ git checkout -- [file name]
 
 ### 3.4.3 Ignoring files
 
-Sometimes there are files you don't want to track (for example: binary files,  secret files, etc. ). You need to create a `.gitignore` file to tell git what files you want to ignore.
+Sometimes there are files you don't want to track (for example: binary files,  secret files, etc. ). You need to create a `.gitignore` file to tell Git what files you want to ignore.
 
 You can specify entire directories in .gitignore or use the * wildcard to ignore files with a particular extension. For example:
 
@@ -267,7 +267,7 @@ $ git merge [branch name]
 
 ### 3.4.8 Resolving merge conflicts
 
-Most of the time,  git is going to be able to merge everything automatically but sometimes git needs some help. If the two branches you‘re trying to merge both changed the same part of the same file, git won’t be able to figure out which version to use. When such a situation occurs, it stops right before the merge commit so that you can resolve the conflicts manually.
+Most of the time,  Git is going to be able to merge everything automatically but sometimes Git needs some help. If the two branches you‘re trying to merge both changed the same part of the same file, Git won’t be able to figure out which version to use. When such a situation occurs, it stops right before the merge commit so that you can resolve the conflicts manually.
 
 
 ### 3.4.9 Stash
@@ -366,7 +366,7 @@ It shows the news feed to the user, the datum is retrieved in batches (10 news e
 
 Git **never** wraps text automatically. When you write the body of a commit message, you must mind its right margin, and wrap text manually.
 
-The recommendation is to do this at 72 characters, so that git has plenty of room to indent text while still keeping everything under 80 characters overall.
+The recommendation is to do this at 72 characters, so that Git has plenty of room to indent text while still keeping everything under 80 characters overall.
 
 - Use the body to explain what and **why vs. how**
 ```
@@ -394,7 +394,7 @@ $ git merge [branch name]
 
 # 5 Alternatives
 
-Like we said before the main purpose of this guide is promote between developers the use of a version control system.  Besides how much we love git, we know there are more version control systems.  We cannot say that git is better or worse than others, every version has advantages and disadvantages.
+Like we said before the main purpose of this guide is promote between developers the use of a version control system.  Besides how much we love Git, we know there are more version control systems.  We cannot say that Git is better or worse than others, every version has advantages and disadvantages.
 
 You can find a full list of version control systems [here](https://en.wikipedia.org/wiki/List_of_version_control_software).
 
