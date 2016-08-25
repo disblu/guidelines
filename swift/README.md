@@ -1,6 +1,8 @@
+![alt text](img/swift.png "Swift")
+
 # Swift Walkthrough
 
-The main purpose of this guide is to create code that is concise, readable and simple.✌🏻
+The main purpose of this guide is to create code that is concise, readable and simple✌🏻.
 
 - [1 Naming](#1-naming)
    - [1.1 Protocols](#11-protocols)
@@ -17,6 +19,14 @@ The main purpose of this guide is to create code that is concise, readable and s
     - [4.4 Classes and Structures](#44-classes-and-structures)
     - [4.5 Self](#45-self)
     - [4.6 Computed Properties](#46-computed-properties)
+- [5 Optionals](#5-optionals)
+    - [5.1 Optional Chaining](#51-optional-chaining)
+    - [5.2 Optional Binding](#52-optional-binding)
+    - [5.3 Guard](#53-guard)
+    - [5.4 Without Guard](#54-without-guard)
+- [6 Control Flow](#6-control-flow)
+- [7 Initializer and Deinitializer](#7-initializer-and-deinitializer)
+- [8 Correctness](#8-correctness)
 - [Thanks to](#thanks-to)
 
 # 1 Naming
@@ -113,7 +123,7 @@ let rojo = CGColor.redColor()
 # 2 Spacing
 
 Indent using 2 spaces rather than tabs to conserve space and help prevent line wrapping. Be sure to set this preference in Xcode and in the Project settings as shown below:
-![alt text](indentation.png "Indent")
+![alt text](img/indentation.png "Indent")
 
 Method braces and other braces (if/else/switch/while etc.) always open on the same line as the statement but close on a new line.
 
@@ -368,7 +378,204 @@ var diameter: Double {
   }
 }
 ```
+# 5 Optionals 
 
+Swift accepts the declaration of variables and function return types as optionals with ```?```  where a nil value is acceptable.
+
+Use implicitly unwrapped types declared with ! only for instance variables that you know will be initialized later before use, such as subviews that will be set up in viewDidLoad.
+
+## 5.1 Optional Chaining
+Optional chaining is a process for querying and calling properties, methods, and subscripts on an optional that might currently be nil. If the optional contains a value, the property, method, or subscript call succeeds; if the optional is nil, the property, method, or subscript call returns nil. Multiple queries can be chained together, and the entire chain fails gracefully if any link in the chain is nil.
+
+```Swift
+navigationController?.popToRootViewControllerAnimated(true)
+```
+If the current view controller is embeded into a navigation controller, it will remove all the view controllers from the stack, until the root view controller is on top. If the current view controller is not within a navigation controller, then nothing will happen ☝🏻.
+
+## 5.2 Optional Binding
+When you want to be sure that you will perform an action on something with value, you can use optional binding.
+
+```Swift
+class Dog {
+  func bark() {
+    print("guau")
+  }
+}
+
+class Person {
+  var pet: Dog?
+}
+
+let joe = Person()
+
+if let chester = joe.pet {
+  chester.bark()
+}
+```
+
+## 5.3 Guard
+Whenever nil just won't be any useful, ```guard``` lets you handle that situation.
+
+```Swift
+func submit() {
+    guard let name = nameField.text else {
+        show("No name to submit")
+        return
+    }
+
+    guard let address = addressField.text else {
+        show("No address to submit")
+        return
+    }
+
+    guard let phone = phoneField.text else {
+        show("No phone to submit")
+        return
+    }
+
+    sendToServer(name, address: address, phone: phone)
+}
+
+func sendToServer(name: String, address: String, phone: String) {
+  ...
+}
+```
+```guard```guarantees that you will have a value to work with and if you don't, you can act accordingly.
+
+## 5.4 Without Guard
+
+```Swift
+func submit() {
+    if let name = nameField.text {
+        if let address = addressField.text {
+            if let phone = phoneField.text {
+                sendToServer(name, address: address, phone: phone)
+            } else {
+                show("no phone to submit")
+            }
+        } else {
+            show("no address to submit")
+        }
+    } else {
+        show("no name to submit")
+    }
+}
+```
+The code becomes hard to read and deeply nested 😐.
+
+# 6 Control Flow
+Prefer the ```for-in``` style of for loop over the ```while-condition-increment``` style.
+
+Good:
+```Swift
+for _ in 0..<5 {
+  print("Hello five times")
+}
+
+for (index, person) in attendeeList.enumerate() {
+  print("\(person) is at position #\(index)")
+}
+
+for index in 0.stride(to: books, by: 3) {
+  print(index)
+}
+```
+
+Bad:
+
+```Swift
+var i = 0
+while i < 5 {
+  print("Hello five times")
+  i += 1
+}
+
+
+var i = 0
+while i < attendeeList.count {
+  let person = attendeeList[i]
+  print("\(person) is at position #\(i)")
+  i += 1
+}
+```
+#7 Initializer and Deinitializer
+Initializers are called to create a new instance of a particular type. In its simplest form, an initializer is like an instance method with no parameters, written using the init keyword:
+
+```Swift
+struct Fahrenheit {
+  var temperature: Double
+    
+    init() {
+        temperature = 32.0
+    }
+}
+
+var f = Fahrenheit()
+print("The default temperature is \(f.temperature)° Fahrenheit")
+// Prints "The default temperature is 32.0° Fahrenheit"
+```
+
+You can provide initialization parameters as part of an initializer’s definition, to define the types and names of values that customize the initialization process. Initialization parameters have the same capabilities and syntax as function and method parameters.
+
+```Swift
+struct Celsius {
+    var temperatureInCelsius: Double
+    init(fromFahrenheit fahrenheit: Double) {
+        temperatureInCelsius = (fahrenheit - 32.0) / 1.8
+    }
+    init(fromKelvin kelvin: Double) {
+        temperatureInCelsius = kelvin - 273.15
+    }
+}
+let boilingPointOfWater = Celsius(fromFahrenheit: 212.0)
+// boilingPointOfWater.temperatureInCelsius is 100.0
+let freezingPointOfWater = Celsius(fromKelvin: 273.15)
+// freezingPointOfWater.temperatureInCelsius is 0.0
+```
+
+A deinitializer is called immediately before a class instance is deallocated. You write deinitializers with the deinit keyword, similar to how initializers are written with the init keyword. Deinitializers are only available on class types.
+
+Deinitializers are called automatically, just before instance deallocation takes place. You are not allowed to call a deinitializer yourself. 
+
+Because an instance is not deallocated until after its deinitializer is called, a deinitializer can access all properties of the instance it is called on and can modify its behavior based on those properties.
+
+
+
+```Swift
+class Bank {
+    static var coinsInBank = 10000
+    static func vendCoins(numberOfCoinsRequested: Int) -> Int {
+        let numberOfCoinsToVend = min(numberOfCoinsRequested, coinsInBank)
+        coinsInBank -= numberOfCoinsToVend
+        return numberOfCoinsToVend
+    }
+    static func receiveCoins(coins: Int) {
+        coinsInBank += coins
+    }
+}
+
+class Player {
+    var coinsInPurse: Int
+    init(coins: Int) {
+        coinsInPurse = Bank.vendCoins(coins)
+    }
+    deinit {
+        Bank.receiveCoins(coinsInPurse)
+    }
+}
+```
+```Swift
+var playerOne: Player? = Player(coins: 100)
+
+```
+In this example, playerOne started with 100 coins, which means the bank now has 9,900 coins left
+```Swift
+playerOne = nil
+```
+Whenever that instance is no longer used, deinit() gets called and the bank gets all the coins that where assigned to playerOne.
+
+#8 Correctness
+Consider warnings to be errors. This rule informs many stylistic decisions such as not to use the ++ or -- operators, C-style for loops, or strings as selectors.
 
 # Thanks to
 
