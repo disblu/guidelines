@@ -46,9 +46,9 @@ The benefits of a system like this is that multiple developers can make changes,
 
 ## 1.3 Download
 
-At this point, you may have asked yourself some questions like: How do I get this awesome tool?, is it free? Well git is completely free and its also open source. And its available for mac, linux and windows users.
+At this point, you may have asked yourself some questions like: How do I get this awesome tool?, is it free? Well, git is completely free and it's also open source. It's available for Mac, Linux and Windows users.
 
-If you are a mac or linux user a old version of git is probably already installed on your computer, if you are window user you need to download it.
+If you are a Mac or Linux user, an older version of git is probably already installed on your computer. If you are a Windows user, you need to download it.
 
 Links to download git:
 
@@ -110,7 +110,7 @@ color.diff=auto
 
 ### 3.4.1 Creating a new repository
 
-Before to being able to star tracking the changes on your project you need to initialise the Git repository.  Just go to the root of the project and use the next command:
+Before being able to start tracking the changes on your project, you need to initialise the Git repository.  Just go to the root of the project and use the next command:
 
 ```bash
 $ git init
@@ -172,7 +172,7 @@ You can specify entire directories in .gitignore or use the * wildcard to ignore
 
 ### 3.4.4 Cloning a repository
 
-Sometimes you need to work using an existing repository,  you can use the `clone` commando to do so.
+Sometimes you need to work using an existing repository,  you can use the `clone` command to do so.
 
 ```bash
 $ git clone [url]
@@ -203,7 +203,7 @@ Date:   Sat Mar 15 10:31:28 2008 -0700
    Initial commit
 ```
 
-The log command has many options you can use to filter and give format to the output. For example you can use the --oneline and it will show you something like this:
+The log command has many options you can use to filter and give format to the output. For example, you can use the --oneline and it will show you something like this:
 
 ```bash
 $ git log --oneline
@@ -217,7 +217,7 @@ To read more about the `log` command click [here](https://git-scm.com/book/en/v2
 
 ### 3.4.6 Branches
 
-Until now we have been working on the same branch ("master").  But What is a branch? A branch represents an independent line of development. New commits are recorded in the history for the current branch, which results in a fork in the history of the project.
+Until now we have been working on the same branch ("master").  But, what is a branch? A branch represents an independent line of development. New commits are recorded in the history for the current branch, which results in a fork in the history of the project.
 
 List all of the branches in your repository.
 
@@ -267,7 +267,7 @@ $ git merge [branch name]
 
 ### 3.4.8 Resolving merge conflicts
 
-Most of the time,  Git is going to be able to merge everything automatically but sometimes Git needs some help. If the two branches you‘re trying to merge both changed the same part of the same file, Git won’t be able to figure out which version to use. When such a situation occurs, it stops right before the merge commit so that you can resolve the conflicts manually.
+Most of the time,  Git is going to be able to merge everything automatically, but sometimes Git needs some help. If the two branches you‘re trying to merge both changed the same part of the same file, Git won’t be able to figure out which version to use. When such a situation occurs, it stops right before the merge commit so that you can resolve the conflicts manually.
 
 
 ### 3.4.9 Stash
@@ -346,7 +346,7 @@ It shows the news feed to the user, the datum is retrieved in batches (10 news e
 # bad
 "add visa and master card payment methods"
 ```
--  Do not end the subject line with a period
+-  Do not end the subject line with a dot
 
 ```ruby
 # good
@@ -371,13 +371,13 @@ The recommendation is to do this at 72 characters, so that Git has plenty of roo
 - Use the body to explain what and **why vs. how**
 ```
 commit eb0b56112492ab5c16c745e6da39c53126924ed6
-Author: Corgs Yerena <corgs@disblu.com>
+Author: Juan Yerena <juan@disblu.com>
 Date:   Wed Jul 10 10:57:55 2017 +0200
 
    Update devise gem to 4.2
 
    Replace devise deprecated methods, the Facebook login module
-   now doesn't require the birthday field to registrar a user.
+   now doesn't require the birthday field to register a user.
 ```
 ## 4.3 Merging
 
